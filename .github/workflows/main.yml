@@ -8,8 +8,7 @@ jobs:
       - name: Run SOOS CSA Analysis
         uses: soos-io/soos-csa-github-action@v1.0.0 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
-          client_id: ${{ secrets.SOOS_CLIENT_ID }}
-          api_key: ${{ secrets.SOOS_API_KEY }}
-          api_url: "https://qa-api.soos.io/api/"	
+          client_id: ${{ secrets.PD_SOOS_CLIENT_ID }}
+          api_key: ${{ secrets.PD_SOOS_API_KEY }}	
           project_name: "CSA-GithubActions-test"
           target_image: "alpine:latest"
