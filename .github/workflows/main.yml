@@ -2,6 +2,8 @@ on: [push]
 
 jobs:
   soos_csa_analysis:
+    permissions:
+      security-events: write # for uploading code scanning alert info
     name: SOOS CSA Analysis
     runs-on: ubuntu-latest
     steps:
