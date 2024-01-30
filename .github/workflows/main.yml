@@ -13,7 +13,7 @@ jobs:
           api_url: "https://qa-api.soos.io/api/"	
           project_name: "CSA-GithubActions-test"
           #onFailure: "fail_the_build"
-          output_format: SARIF
-          log_level: WARN
+          #output_format: SARIF
+          log_level: UNKNOWN
           target_image: "nginx:alpine3.18"
           verbose: true
