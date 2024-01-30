@@ -17,7 +17,7 @@ jobs:
           log_level: DEBUG
           target_image: "nginx:alpine3.18"
           verbose: false
-      - name: Upload SOOS DAST Report # 3rd party action to upload sarif results to your github repo
-        uses: github/codeql-action/upload-sarif@v2
+      - name: Upload SOOS CSA Report # 3rd party action to upload sarif results to your github repo
+        uses: github/codeql-action/upload-sarif@v3
         with:
           sarif_file: results.sarif
