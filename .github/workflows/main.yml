@@ -16,3 +16,4 @@ jobs:
           output_format: SARIF
           log_level: WARN
           target_image: "nginx:alpine3.18"
+          verbose: true
