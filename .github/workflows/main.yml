@@ -12,7 +12,7 @@ jobs:
         with:
           client_id: ${{ secrets.PD_SOOS_CLIENT_ID }}
           api_key: ${{ secrets.PD_SOOS_API_KEY }}
-          api_url: "https://qa-api.soos.io/api/"	
+          #api_url: "https://qa-api.soos.io/api/"	
           project_name: "CSA-GithubActions-test"
           #onFailure: "fail_the_build"
           output_format: SARIF
