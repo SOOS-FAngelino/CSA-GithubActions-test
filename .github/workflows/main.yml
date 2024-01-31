@@ -16,7 +16,7 @@ jobs:
           project_name: "CSA-GithubActions-test"
           #onFailure: "fail_the_build"
           output_format: SARIF
-          log_level: UNKNOWN
+          log_level: WARN
           target_image: "alpine"
           verbose: false
       - name: Upload SOOS CSA Report # 3rd party action to upload sarif results to your github repo
