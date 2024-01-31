@@ -10,14 +10,14 @@ jobs:
       - name: Run SOOS CSA Analysis
         uses: soos-io/soos-csa-github-action@fix/PA-12699 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
-          client_id: ${{ secrets.SOOS_CLIENT_ID }}
-          api_key: ${{ secrets.SOOS_API_KEY }}
+          client_id: ${{ secrets.PD_SOOS_CLIENT_ID }}
+          api_key: ${{ secrets.PD_SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"	
           project_name: "CSA-GithubActions-test"
           #onFailure: "fail_the_build"
           output_format: SARIF
-          log_level: DEBUG
-          target_image: "unknown-image:123"
+          log_level: UNKNOWN
+          target_image: "alpine"
           verbose: false
       - name: Upload SOOS CSA Report # 3rd party action to upload sarif results to your github repo
         uses: github/codeql-action/upload-sarif@v3
