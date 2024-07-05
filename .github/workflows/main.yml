@@ -17,7 +17,7 @@ jobs:
           #onFailure: "fail_the_build"
           output_format: SARIF
           #log_level: WARN
-          target_image: "amazonlinux:2"
+          target_image: "alpine/helm:3.14.0"
           verbose: true
       - name: Upload SOOS CSA Report # 3rd party action to upload sarif results to your github repo
         uses: github/codeql-action/upload-sarif@v3
