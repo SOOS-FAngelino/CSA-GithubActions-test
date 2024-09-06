@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@v1.0.2 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
+        uses: soos-io/soos-csa-github-action@c8a86b922b583b2028ff110289696f6f5a0e4d86 # GET Latest Version from https://github.com/marketplace/actions/soos-csa
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
@@ -18,7 +18,7 @@ jobs:
           output_format: SARIF
           #log_level: WARN
           target_image: "alpine/helm:3.14.0"
-          #verbose: true
+          verbose: true
       - name: Upload SOOS CSA Report # 3rd party action to upload sarif results to your github repo
         uses: github/codeql-action/upload-sarif@v3
         with:
