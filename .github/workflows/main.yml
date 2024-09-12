@@ -8,11 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@c8a86b922b583b2028ff110289696f6f5a0e4d86
+        uses: soos-io/soos-csa-github-action@9e58f2457728bdba68bbdaeae24b83197bb7196d
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"
           project_name: "CSA-GithubActions-test"
           target_image: "ruby:alpine3.18"
-          verbose: true
+          output_format: SARIF
+          log_level: DEBUG
+          image_tag: alpha
