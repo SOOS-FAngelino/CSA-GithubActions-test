@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run SOOS CSA Analysis
-        uses: soos-io/soos-csa-github-action@9e58f2457728bdba68bbdaeae24b83197bb7196d
+        uses: soos-io/soos-csa-github-action@v1
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
@@ -20,7 +20,7 @@ jobs:
           target_image: "ruby:alpine3.18"
           output_format: SARIF
           log_level: DEBUG
-          image_tag: alpha
+          image_tag: beta
       - name: Upload SOOS DAST SARIF Report
         uses: github/codeql-action/upload-sarif@v3
         with:
