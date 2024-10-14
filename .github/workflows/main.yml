@@ -17,7 +17,7 @@ jobs:
           api_key: ${{ secrets.SOOS_API_KEY }}
           api_url: "https://qa-api.soos.io/api/"
           project_name: "CSA-GithubActions-test"
-          target_image: "ruby:alpine3.18"
+          target_image: 'ericallard/elasticsearch:x86'
           output_format: SARIF
           log_level: DEBUG
           image_tag: beta
