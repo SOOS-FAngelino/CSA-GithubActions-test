@@ -13,7 +13,7 @@ jobs:
         with:
           client_id: ${{ secrets.QA_SOOS_CLIENT_ID }}
           api_key: ${{ secrets.QA_SOOS_API_KEY }}
-          api_url: "https://api.soos.io/api/"        
+          api_url: "https://qa-api.soos.io/api/"        
           project_name: "GH Actions- CSA"
           target_image: "alpine"  
           image_tag: beta
